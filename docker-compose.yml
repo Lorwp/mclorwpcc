@@ -17,3 +17,4 @@ services:
     volumes:
       - ./data/atm9:/data
       - ./downloads:/downloads
+      - ./mods:/mods
