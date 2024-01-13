@@ -13,9 +13,18 @@ services:
       # Optional: select a specific version/file
       #CF_FILENAME_MATCHER: "0.2.34"
       MEMORY: 8G
+      USE_AIKAR_FLAGS: true
+      # Server properties
+      MOTD: Running %MODPACK_NAME% version %env:MODPACK_VERSION%
+      SNOOPER_ENABLED: false
+      ALLOW_FLIGHT: true
+      SERVER_NAME: mc.lorwp.cc %MODPACK_NAME%
+      DIFFICULTY: normal
+    restart: unless-stopped
     env_file:
       - ./api.env
     volumes:
       - ./data/atm9:/data
       - ./downloads:/downloads
       - ./mods:/mods
+      - /etc/timezone:/etc/timezone:ro
