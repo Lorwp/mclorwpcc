@@ -28,3 +28,4 @@ services:
       - ./downloads:/downloads
       - ./mods:/mods
       - /etc/timezone:/etc/timezone:ro
+      - ./config:/config
