@@ -1,5 +1,5 @@
 api.env
 data/
 downloads/
-config/
 mods/
+config/simple-discord-bot.toml.example
