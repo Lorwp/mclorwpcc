@@ -2,4 +2,4 @@ api.env
 data/
 downloads/
 mods/
-config/simple-discord-bot.toml.example
+config/simple-discord-bot.toml
