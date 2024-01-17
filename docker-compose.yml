@@ -18,6 +18,21 @@ services:
       ALLOW_FLIGHT: true
       SERVER_NAME: mc.lorwp.cc %MODPACK_NAME%
       DIFFICULTY: normal
+      WHITELIST: |
+        lorwp
+        NoxVS
+        DoctorTimeLord
+        Jackraxxus
+        Isratosh
+        Thunder22
+        Pink______
+        NarNarMoth
+        Nimowa
+      EXISTING_WHITELIST_FILE: SYNCHRONIZE
+      OPS: |
+        lorwp
+        Isratosh
+      EXISTING_OPS_FILE: SYNCHRONIZE
     restart: unless-stopped
     env_file:
       - ./api.env
