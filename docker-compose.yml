@@ -18,6 +18,7 @@ services:
       ALLOW_FLIGHT: true
       SERVER_NAME: mc.lorwp.cc %MODPACK_NAME%
       DIFFICULTY: normal
+      ENABLE_WHITELIST: true
       WHITELIST: |
         lorwp
         NoxVS
