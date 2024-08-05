@@ -9,7 +9,7 @@ services:
       MOD_PLATFORM: AUTO_CURSEFORGE
       CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-gravitas2
       CF_FORCE_INCLUDE_MODS: |
-        https://www.curseforge.com/minecraft/mc-mods/caelum/files/4674619
+        caelum
       MEMORY: 8G
       USE_AIKAR_FLAGS: true
       # Server properties
