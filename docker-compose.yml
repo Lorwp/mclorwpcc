@@ -28,6 +28,7 @@ services:
         NarNarMoth
         Nimowa
         Davethwave
+        kinnebian
       EXISTING_WHITELIST_FILE: SYNCHRONIZE
       OPS: |
         lorwp
