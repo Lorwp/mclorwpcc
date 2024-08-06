@@ -5,11 +5,12 @@ services:
       - "25565:25565"
     environment:
       EULA: "true"
+      ENABLE_RCON: true
       CF_API_KEY: ${CF_API_KEY}
       MOD_PLATFORM: AUTO_CURSEFORGE
-      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-gravitas2
-      CF_FORCE_INCLUDE_MODS: |
-        caelum
+      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-gravitas2/
+      CF_EXCLUDE_MODS: |
+        tfc-caelum
       MEMORY: 8G
       USE_AIKAR_FLAGS: true
       # Server properties
@@ -31,6 +32,9 @@ services:
         Nimowa
         Davethwave
         kinnebian
+        Gaston6828
+        walterclements69
+        nabski
       EXISTING_WHITELIST_FILE: SYNCHRONIZE
       OPS: |
         lorwp
@@ -52,12 +56,17 @@ services:
       mc:
         condition: service_healthy
     environment:
+      TZ: Australia/Melbourne
       BACKUP_INTERVAL: 1h
       RCON_HOST: mc
+
       # since this service waits for mc to be healthy, no initial delay is needed
       INITIAL_DELAY: 0
       BACKUP_METHOD: restic
       # RESTIC_PASSWORD and RESTIC_REPOSITORY should be set in restic.env
+      RESTIC_HOSTNAME: "tg_gravitas2"
     restart: unless-stopped
     env_file:
         - ./restic.env
+    volumes:
+      - ./data/gravitas2:/data:ro
