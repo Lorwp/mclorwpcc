@@ -35,6 +35,7 @@ services:
         Gaston6828
         walterclements69
         nabski
+        Ayame_Pup
       EXISTING_WHITELIST_FILE: SYNCHRONIZE
       OPS: |
         lorwp
