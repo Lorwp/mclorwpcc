@@ -12,6 +12,9 @@ services:
       CF_EXCLUDE_MODS: |
         tfc-caelum
       MEMORY: 8G
+      CURSEFORGE_FILES: |
+        https://www.curseforge.com/minecraft/mc-mods/simple-discord-link-bot-forge-fabric-spigot
+        https://www.curseforge.com/minecraft/mc-mods/craterlib
       USE_AIKAR_FLAGS: true
       # Server properties
       MOTD: Running %MODPACK_NAME% version %env:MODPACK_VERSION%
@@ -43,7 +46,7 @@ services:
       EXISTING_OPS_FILE: SYNCHRONIZE
     restart: unless-stopped
     env_file:
-      - ./mc.env.example
+      - ./mc.env
     volumes:
       - ./data/gravitas2:/data
       - ./downloads:/downloads
@@ -53,16 +56,13 @@ services:
   mc-backup:
     container_name: mc-backup
     image: itzg/mc-backup
-    depends_on:
-      mc:
-        condition: service_healthy
     environment:
       TZ: Australia/Melbourne
       BACKUP_INTERVAL: 1h
       RCON_HOST: mc
 
       # since this service waits for mc to be healthy, no initial delay is needed
-      INITIAL_DELAY: 0
+      INITIAL_DELAY: 20
       BACKUP_METHOD: restic
       # RESTIC_PASSWORD and RESTIC_REPOSITORY should be set in restic.env
       RESTIC_HOSTNAME: "tg_gravitas2"
