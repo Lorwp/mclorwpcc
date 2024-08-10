@@ -39,6 +39,7 @@ services:
         walterclements69
         nabski
         Ayame_Pup
+        Arianot
       EXISTING_WHITELIST_FILE: SYNCHRONIZE
       OPS: |
         lorwp
