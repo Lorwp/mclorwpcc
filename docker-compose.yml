@@ -40,6 +40,7 @@ services:
         nabski
         Ayame_Pup
         Arianot
+        ArcaneToxin
       EXISTING_WHITELIST_FILE: SYNCHRONIZE
       OPS: |
         lorwp
