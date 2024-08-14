@@ -7,14 +7,13 @@ services:
       EULA: "true"
       ENABLE_RCON: true
       CF_API_KEY: ${CF_API_KEY}
-      MOD_PLATFORM: AUTO_CURSEFORGE
-      CF_PAGE_URL: https://www.curseforge.com/minecraft/modpacks/all-the-mods-gravitas2/
-      CF_EXCLUDE_MODS: |
-        tfc-caelum
+      TYPE: FORGE
+      VERSION: "1.20.1"
+      FORGE_VERSION: "47.2.6"
       MEMORY: 8G
-      CURSEFORGE_FILES: |
-        https://www.curseforge.com/minecraft/mc-mods/simple-discord-link-bot-forge-fabric-spigot
-        https://www.curseforge.com/minecraft/mc-mods/craterlib
+      MODRINTH_PROJECTS: |
+        sdlink
+      MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
       USE_AIKAR_FLAGS: true
       # Server properties
       MOTD: Running %MODPACK_NAME% version %env:MODPACK_VERSION%
@@ -62,8 +61,6 @@ services:
       TZ: Australia/Melbourne
       BACKUP_INTERVAL: 1h
       RCON_HOST: mc
-
-      # since this service waits for mc to be healthy, no initial delay is needed
       INITIAL_DELAY: 20
       BACKUP_METHOD: restic
       # RESTIC_PASSWORD and RESTIC_REPOSITORY should be set in restic.env
