@@ -16,7 +16,7 @@ services:
       MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
       USE_AIKAR_FLAGS: true
       # Server properties
-      MOTD: Running %MODPACK_NAME% version %env:MODPACK_VERSION%
+      MOTD: Running Gravitas 2 version 0.4.0
       SNOOPER_ENABLED: false
       ALLOW_FLIGHT: true
       SERVER_NAME: mc.lorwp.cc %MODPACK_NAME%
