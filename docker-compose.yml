@@ -9,7 +9,7 @@ services:
       CF_API_KEY: ${CF_API_KEY}
       TYPE: FORGE
       VERSION: "1.20.1"
-      FORGE_VERSION: "47.2.6"
+      FORGE_VERSION: "47.3.0"
       MEMORY: 8G
       MODRINTH_PROJECTS: |
         sdlink
@@ -49,7 +49,7 @@ services:
     env_file:
       - ./mc.env
     volumes:
-      - ./data/gravitas2:/data
+      - ./data:/data
       - ./downloads:/downloads
       - ./mods:/mods
       - /etc/timezone:/etc/timezone:ro
@@ -69,4 +69,4 @@ services:
     env_file:
         - ./restic.env
     volumes:
-      - ./data/gravitas2:/data:ro
+      - ./data:/data:ro
